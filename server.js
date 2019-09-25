@@ -11,7 +11,7 @@ const magnolia = require("./hotel-2804.json");
 app.prepare().then(() => {
   const server = express();
 
-  server.get("/magnolia", (req, res) => {
+  server.get("/magnolia", (_, res) => {
     return res.json(magnolia);
   });
 

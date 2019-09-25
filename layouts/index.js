@@ -1,24 +1,22 @@
 import React from "react";
-import Link from "next/link";
-import { Nav, PageBody } from "../styles";
 import { Global, css } from "@emotion/core";
+
+const globalStyles = css`
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  a {
+    text-decoration: none;
+  }
+`;
 
 const Layout = ({ children }) => {
   return (
     <React.Fragment>
-      <Global
-        styles={css`
-          body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-          }
-          a {
-            text-decoration: none;
-          }
-        `}
-      />
-      <PageBody>{children}</PageBody>
+      <Global styles={globalStyles} />
+      <main>{children}</main>
     </React.Fragment>
   );
 };
