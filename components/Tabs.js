@@ -1,13 +1,9 @@
-import { useState } from "react";
-<<<<<<< HEAD
-import { Tab, TabBody, TabContainer, TabHead } from "../styles";
-=======
 import styled from "@emotion/styled";
->>>>>>> e8e6ce8fa18fbde7df46835a965c73c7e13fed6b
+import { useState } from "react";
 
 const TabHead = styled.header`
   display: flex;
-  background: black;
+  background: ${({ theme }) => theme.primary};
 
   button {
     text-transform: uppercase;
@@ -22,7 +18,7 @@ const Tab = styled.div`
   padding: 1em;
   cursor: pointer;
   color: white;
-  background: ${({ selected }) => (selected ? "grey" : "black")};
+  background: ${({ selected, theme }) => (selected ? "grey" : theme.primary)};
 `;
 
 const TabBody = styled.section`
