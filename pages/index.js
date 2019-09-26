@@ -1,14 +1,17 @@
-import React from "react";
-import Layout from "../layouts";
-import Tabs from "../components/Tabs";
+import { ThemeProvider } from "emotion-theming";
 import fetch from "isomorphic-unfetch";
+import React from "react";
+import Tabs from "../components/Tabs";
+import Layout from "../layouts";
 
 const Home = props => {
   const { content } = props;
   return (
-    <Layout>
-      <Tabs content={content} />
-    </Layout>
+    <ThemeProvider theme={{ primary: "black" }}>
+      <Layout>
+        <Tabs content={content} />
+      </Layout>
+    </ThemeProvider>
   );
 };
 

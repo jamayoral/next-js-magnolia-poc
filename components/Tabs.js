@@ -1,9 +1,9 @@
-import { useState } from "react";
 import styled from "@emotion/styled";
+import { useState } from "react";
 
 const TabHead = styled.header`
   display: flex;
-  background: black;
+  background: ${({ theme }) => theme.primary};
 
   button {
     text-transform: uppercase;
@@ -18,7 +18,7 @@ const Tab = styled.div`
   padding: 1em;
   cursor: pointer;
   color: white;
-  background: ${({ selected }) => (selected ? "grey" : "black")};
+  background: ${({ selected, theme }) => (selected ? "grey" : theme.primary)};
 `;
 
 const TabBody = styled.section`
