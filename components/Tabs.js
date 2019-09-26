@@ -58,6 +58,10 @@ const Card = styled.div`
   }
 `;
 
+const Hotel = ({ hotel }) => {
+  return <div dangerouslySetInnerHTML={{ __html: hotel.keySellingPoints }} />;
+};
+
 const Rooms = ({ rooms }) => {
   return (
     <List>
@@ -88,7 +92,7 @@ const Tabs = ({ content }) => {
         </button>
       </TabHead>
       <TabBody>
-        {activeTab === 1 && <p>hotel content</p>}
+        {activeTab === 1 && <Hotel hotel={content.hotelSection} />}
         {activeTab === 2 && <Rooms rooms={content.roomsSection.rooms} />}
       </TabBody>
     </>
