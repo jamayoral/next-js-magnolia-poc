@@ -39,7 +39,7 @@ const Rooms = ({ rooms }) => {
 };
 
 const Tabs = ({ content }) => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(2);
 
   return (
     <>
