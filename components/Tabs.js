@@ -66,7 +66,7 @@ const Rooms = ({ rooms }) => {
           <Row>
             <Card
               dangerouslySetInnerHTML={{ __html: room.detailedDescription }}
-            ></Card>
+            />
           </Row>
         </Room>
       ))}
