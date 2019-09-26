@@ -1,7 +1,6 @@
+import { css, Global } from "@emotion/core";
 import React from "react";
-import Link from "next/link";
-import { Nav, PageBody } from "../styles";
-import { Global, css } from "@emotion/core";
+import { PageBody } from "../styles";
 
 const Layout = ({ children }) => {
   return (

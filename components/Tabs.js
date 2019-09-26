@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TabHead, TabContainer, TabBody, Tab } from "../styles";
+import { Tab, TabBody, TabContainer, TabHead } from "../styles";
 
 const ActionLink = props => {
   const { onCustomClick, onClick } = props;

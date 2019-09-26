@@ -9,7 +9,7 @@ export const PageBody = styled("div")`
 export const TabHead = styled("div")`
   border-bottom: 1px solid black;
   display: flex;
-  background: black;
+  background: ${({ theme }) => theme.primary};
 `;
 
 export const TabContainer = styled("div")`
@@ -27,7 +27,7 @@ export const TabBody = styled(PageBody)`
 export const Tab = styled("div")`
   padding: 1em;
   cursor: pointer;
-  background: ${({ selected }) => (selected ? "grey" : "black")};
+  background: ${({ selected, theme }) => (selected ? "grey" : theme.primary)};
   * {
     color: white;
   }
