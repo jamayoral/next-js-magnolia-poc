@@ -25,16 +25,52 @@ const TabBody = styled.section`
   padding: 1em;
 `;
 
+const List = styled.ul`
+   {
+    list-style-type: none;
+  }
+`;
+
+const Room = styled.li`
+   {
+    margin: 3em;
+  }
+`;
+
+const Row = styled.div`
+   {
+    margin: 0 -5px;
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+`;
+
+const Card = styled.div`
+   {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: left;
+    background-color: #f1f1f1;
+  }
+`;
+
 const Rooms = ({ rooms }) => {
   return (
-    <ul>
+    <List>
       {rooms.map(room => (
-        <li
-          key={room.uid}
-          dangerouslySetInnerHTML={{ __html: room.detailedDescription }}
-        />
+        <Room key={room.uid}>
+          <Row>
+            <Card
+              dangerouslySetInnerHTML={{ __html: room.detailedDescription }}
+            ></Card>
+          </Row>
+        </Room>
       ))}
-    </ul>
+    </List>
   );
 };
 
